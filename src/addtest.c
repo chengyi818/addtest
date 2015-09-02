@@ -5,7 +5,8 @@
 
 int main(int argc, char *argv[])
 {
-    while(1)
+    int index;
+    for(index=0; index<10; index++)
     {
         FILE *fp=fopen("/tmp/addtest","at");
         system("date >> /tmp/addtest");
