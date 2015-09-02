@@ -1,5 +1,3 @@
-require("nixio.fs")
-
 m=Map("addtest",translate("Luci practice"),translate("fat cheng's test"))
 
 s=m:section(TypedSection,"arguments","")
