@@ -1,7 +1,7 @@
 m=Map("addtest",translate("Luci practice"),translate("fat cheng's test"))
 
 s=m:section(TypedSection,"arguments","")
-s.addremove=true
+s.addremove=false
 s.anonymous=false
 
 enable=s:option(Flag,"enable",translate("Enable"))
