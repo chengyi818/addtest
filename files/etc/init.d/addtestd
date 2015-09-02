@@ -1,0 +1,31 @@
+#!/bin/sh /etc/rc.common
+START=50
+
+run_addtest()
+{
+    local enable
+    config_get_bool enable $1 enable
+
+    if [ $enable ]; then
+        local interval
+        local content
+
+        config_get interval $1 interval
+        config_get content $1 content
+
+        addtest $interval $content           
+    fi
+}
+
+start()
+{
+    config_load addtest
+    config_foreach run_addtest arguments
+}
+
+stop()
+{
+    result=`pidof addtest`
+    kill -9 $result
+    echo "addtest has stoped"
+}

@@ -1,0 +1,3 @@
+config arguments
+    option interval ''
+    option content ''
